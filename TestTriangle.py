@@ -26,14 +26,16 @@ class TestTriangles(unittest.TestCase):
     def testEquilateralTriangles(self): 
         self.assertEqual(classifyTriangle(1,1,1),'Equilateral','1,1,1 should be equilateral')
 
-    def edgeTest1(self):
+    def testEdgeTest1(self):
         self.assertEqual(classifyTriangle(-1,1,1),'InvalidInput','Invalid Input')
-    def edgeTest2(self):
+
+    def testEdgeTest2(self):
         self.assertEqual(classifyTriangle(1,-1,1),'InvalidInput','Invalid Input')
-    def edgeTest3(self):
+
+    def testEdgeTest3(self):
         self.assertEqual(classifyTriangle(1,1,-1),'InvalidInput','Invalid Input')
 
-    def invalidEdges(self):
+    def testInvalidEdges(self):
         self.assertEqual(classifyTriangle(3,4,7),'NotATriangle','Invalid edges')
 
     def testRightTriangleC(self):
